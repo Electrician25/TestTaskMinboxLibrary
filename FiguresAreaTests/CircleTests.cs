@@ -12,7 +12,7 @@ namespace FiguresAreaTests
 			// Arrange, Act.
 			Action area = () =>
 			{
-				if (new Circle(0).GetCircleArea() == 0)
+				if (new Circle(0).GetArea() == 0)
 				{
 					throw new Exception();
 				}
@@ -28,7 +28,7 @@ namespace FiguresAreaTests
 			// Arrange, Act.
 			Action area = () =>
 			{
-				if (new Circle(-7).GetCircleArea() < 0)
+				if (new Circle(-7).GetArea() < 0)
 				{
 					throw new Exception();
 				}
@@ -42,7 +42,7 @@ namespace FiguresAreaTests
 		public void WhenCalculateCircleArea_AndRadiusCorrect_AreaShouldBeTrue()
 		{
 			// Arrange, Act.
-			var isCorrectArea = new Circle(6).GetCircleArea() == 113.04;
+			var isCorrectArea = new Circle(6).GetArea() == 113.04;
 
 			// Assert.
 			isCorrectArea.Should().BeTrue();

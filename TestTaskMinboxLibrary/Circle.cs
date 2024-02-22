@@ -1,15 +1,15 @@
 ﻿namespace TestTaskMinboxLibrary
 {
-	public class Circle
+	public class Circle : IArea
 	{
-		private int _radius { get; }
+		private int _radius;
 
 		public Circle(int radius)
 		{
 			_radius = radius;
 		}
 
-		public double GetCircleArea()
+		public double GetArea()
 		{
 			ThrowIfNotValid();
 

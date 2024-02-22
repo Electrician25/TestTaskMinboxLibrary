@@ -1,10 +1,10 @@
 ﻿namespace TestTaskMinboxLibrary
 {
-	public class Triangle
+	public class Triangle : IArea, IPerimeter
 	{
-		private int _a { get; }
-		private int _b { get; }
-		private int _c { get; }
+		private int _a;
+		private int _b;
+		private int _c;
 
 		public Triangle(int a, int b, int c)
 		{
@@ -13,16 +13,16 @@
 			_c = c;
 		}
 
-		public double GetTriangleArea()//if area is 0 then triangle is right triangle
+		public double GetArea()
 		{
 			ThrowIfNotValid(_a, _b, _c);
 
-			var perimeter = GetTrianglePerimeter() / 2;
+			var perimeter = GetPerimeter() / 2;
 
 			return Math.Sqrt(perimeter * (perimeter - _a) * (perimeter - _b) * (perimeter - _c));
 		}
 
-		public double GetTrianglePerimeter()
+		public double GetPerimeter()
 		{
 			ThrowIfNotValid(_a, _b, _c);
 
